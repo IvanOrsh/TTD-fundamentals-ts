@@ -7,6 +7,7 @@
 - [Green Bar Pattern: Fake it](#green-bar-pattern-fake-it)
 - [Equivalence Partitions and Boundaries](#equivalence-partitions-and-boundaries)
 - [Green Bar Pattern: Triangulation](#green-bar-pattern-triangulation)
+- [The Stages of Naming](#the-stages-of-naming)
 
 ## Intro:
 
@@ -65,7 +66,7 @@ init `jest.config.js`: `npx ts-jest config:init`
 - **THOROUGH** - aim to cover every scenario (raw code coverage is not sufficient)
 
   - A few acceptance tests (acceptance tests)
-  - some intergration tests
+  - some integration tests
   - MANY unit tests
 
 ---
@@ -95,7 +96,7 @@ Green Bar Pattern: Known ways to get to Green
 ## Equivalence Partitions and Boundaries
 
 - **Equivalence Partition** - A group of values for which the behavior of the code is the same
-- **Boundary** - Where thwo equivalence partitions meet (where code changes from one behavior to another)
+- **Boundary** - Where two equivalence partitions meet (where code changes from one behavior to another)
 
 - for testing just pick values **at the boundary** and some within
 
@@ -107,4 +108,13 @@ Green Bar Pattern: Known ways to get to Green
 - **Triangulation**: Write three tests around a concept to draw the solution
 - Fake it -> Fake it -> Make it (triangulate) or just continue faking it
 
-next-> age calculator kata, video 34
+---
+
+## The Stages of Naming
+
+- Naming is important, and difficult!
+- Stages:
+  1. Nonsense (cake)
+  2. Accurate (sum, repository)
+  3. Precise (sumOfAllTran, sactionsForA, ccount)
+  4. Meaningful (balance) - **intention revealing**, **domain concepts**
