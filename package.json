@@ -1,7 +1,7 @@
 {
-  "name": "ts-starter",
+  "name": "TTD-fundamentals-ts",
   "version": "1.0.0",
-  "description": "Starter project",
+  "description": "Fundamentals of Test Driven Development",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf ./build",
@@ -13,19 +13,20 @@
     "format": "npx prettier --write src",
     "format:check": "npx prettier --check src",
     "test": "jest",
+    "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IvanOrsh/node-ts-starter.git"
+    "url": "git+https://github.com/IvanOrsh/TTD-fundamentals-ts.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IvanOrsh/node-ts-starter/issues"
+    "url": "https://github.com/IvanOrsh/TTD-fundamentals-ts/issues"
   },
-  "homepage": "https://github.com/IvanOrsh/node-ts-starter#readme",
+  "homepage": "https://github.com/IvanOrsh/TTD-fundamentals-ts#readme",
   "devDependencies": {
     "@types/jest": "^29.4.0",
     "@types/node": "^18.15.0",
