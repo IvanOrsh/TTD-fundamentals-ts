@@ -1,2 +1,3 @@
 # node-ts-starter
-Starter project
+
+A starter template for node + ts projects
