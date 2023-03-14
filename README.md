@@ -14,6 +14,11 @@
   - [Green Bar Pattern: Backout](#green-bar-pattern-backout)
   - [Green Bar Pattern: Learning Test](#green-bar-pattern-learning-test)
 - [TTD Gears](#ttd-gears)
+- [Test Doubles](#test-doubles)
+  - [Test Doubles: Fakes](#test-doubles-fakes)
+  - [Test Doubles: Stubs](#test-doubles-stubs)
+  - [Test Doubles: Mock](#test-doubles-mock)
+  - [Test Doubles: Summary](#test-doubles-summary)
 
 ## Intro:
 
@@ -166,3 +171,51 @@ Green Bar Pattern: Known ways to get to Green
 - hight: (familiar domain, confidence)
 
 - rev(reverse): Red / Red / Reverse! (Backout)
+
+---
+
+## Test Doubles
+
+- Two main styles:
+  - **London**: heavy use of test doubles
+  - **Chicago**: minimize use of test doubles
+
+### Test Doubles: Fakes
+
+- **Fake**: an object with a simplified working implementation (for example, FakeUserRepository that uses in memory list instead of UserRepository that uses db)
+
+**Rules**:
+
+1. Only for indirect input
+2. Not used for control
+3. Not used for assertions
+
+- Only there because the SUP has to have it to function, but not actually involved.
+
+### Test Doubles: Stubs
+
+- **Stub** - an object that provides predefined data
+
+**Rules**:
+
+1. Can be used for indirect input
+2. Can be used for control
+3. Not used for assertions
+
+### Test Doubles: Mock
+
+- **Mock** - an object that records calls received, and verifies them against expected calls
+
+**Rules**:
+
+1. Can be used for indirect input
+2. Can be used for control
+3. Used for assertion
+
+### Test Doubles: Summary
+
+- **Test Double** - A piece of code that replaces some "real" code for purpose of testing.
+- **Why?** - So that our tests can be Fast, Isolated and Repeatable
+- **Fake** - an object with a simplified working implementation
+- **Stub** - an object that provides the predefined data
+- **Mock** - an object that records calls received, and verifies them against expected calls.
