@@ -8,6 +8,12 @@
 - [Equivalence Partitions and Boundaries](#equivalence-partitions-and-boundaries)
 - [Green Bar Pattern: Triangulation](#green-bar-pattern-triangulation)
 - [The Stages of Naming](#the-stages-of-naming)
+- [Green Bar Patterns](#green-bar-patterns)
+  - [Green Bar Pattern: One-to-many](#green-bar-pattern-one-to-many)
+  - [Green Bar Pattern: Obvious (most tempting one to use)](#green-bar-pattern-obvious-most-tempting-one-to-use)
+  - [Green Bar Pattern: Backout](#green-bar-pattern-backout)
+  - [Green Bar Pattern: Learning Test](#green-bar-pattern-learning-test)
+- [TTD Gears](#ttd-gears)
 
 ## Intro:
 
@@ -118,3 +124,45 @@ Green Bar Pattern: Known ways to get to Green
   2. Accurate (sum, repository)
   3. Precise (sumOfAllTran, sactionsForA, ccount)
   4. Meaningful (balance) - **intention revealing**, **domain concepts**
+
+---
+
+## Green Bar Patterns
+
+- Green Bar Pattern: Known ways to get to Green
+
+### Green Bar Pattern: One-to-many
+
+- One-to-many: Start with a single item before moving to a collection
+
+### Green Bar Pattern: Obvious (most tempting one to use)
+
+- Obvious: Go ahead and write the obvious implementation
+- If it fails, undo and try another path
+- Remember to refactor
+
+### Green Bar Pattern: Backout
+
+- Backout: Undo to get back to green
+- Ways forward after backout:
+  - Learning test (see next pattern)
+  - Use Fake It and Triangulation
+
+### Green Bar Pattern: Learning Test
+
+- Learning Test: Try writing an implementation directly in a test to see if it work
+- Some Scenarios:
+  - During refactoring
+  - After a Backout
+  - Exploring a new module / API
+
+---
+
+## TTD Gears
+
+- core: FIRST, RedGreenRefactor, Equivalence Partitions and Boundaries
+- low: 3 laws of TTD, the stages of naming, Fake It, Triangulation, One-to-many, Learning Test (uncertain, not confident)
+- med: Obvious (some familiarity, confidence)
+- hight: (familiar domain, confidence)
+
+- rev(reverse): Red / Red / Reverse! (Backout)
