@@ -19,6 +19,12 @@
   - [Test Doubles: Stubs](#test-doubles-stubs)
   - [Test Doubles: Mock](#test-doubles-mock)
   - [Test Doubles: Summary](#test-doubles-summary)
+- [SOLID](#solid)
+  - [Single Responsibility Principle](#single-responsibility-principle)
+  - [Open / Closed Principle](#open--closed-principle)
+- [Liskov Substitution Principle](#liskov-substitution-principle)
+- [Interface Segregation Principle](#interface-segregation-principle)
+- [Dependency Inversion Principle](#dependency-inversion-principle)
 
 ## Intro:
 
@@ -219,3 +225,50 @@ Green Bar Pattern: Known ways to get to Green
 - **Fake** - an object with a simplified working implementation
 - **Stub** - an object that provides the predefined data
 - **Mock** - an object that records calls received, and verifies them against expected calls.
+
+---
+
+## SOLID
+
+### Single Responsibility Principle
+
+- **SRP**: "A class should have only one reason to change" (but not only applicable to classes)
+  - What is responsibility?
+    - **Concerns** - things the code needs to accomplish (e.g a Person with some data fields **and** a Save() method)
+    - **Concepts** - ideas represented in the class / module
+      - e.g a Person with some characteristics of the person (name, contact number), information about their credit history
+
+### Open / Closed Principle
+
+- **OCP**: "Software entities should be open for extension but closed for modification"
+  - Open for extension: Can be extended in order to change its behavior
+  - Closed for modification: Not necessary to change its source code to make change in behavior
+  - The idea: change behavior of the system **only by adding code**
+
+## Liskov Substitution Principle
+
+- **LSP**: "Subtypes must be substitutable for their base types"
+  - Code that depends on an abstraction ...
+    - Should be able to use **any** implementation of that abstraction
+  - Counter-examples:
+    - Implement an interface, but _throw_
+    - More restrictive validation on the subtypes
+
+## Interface Segregation Principle
+
+- **LSP**: "Clients should not be forced to depend on methods they don't use"
+  - Interfaces should be kept as small as possible
+    - Will all implementations implement each member?
+    - Will all clients need every member?
+
+## Dependency Inversion Principle
+
+- **DIP**:
+
+  - A: High-level modules should not depend on low-level modules. Both should depend on abstractions.
+  - B: Abstractions should not depend on details. Details should depend on abstractions.
+
+- high-level: your core domain
+- low-level: not your core domain
+- Abstractions: Interfaces, function signatures
+- Details: Concrete implementations of abstractions
