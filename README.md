@@ -256,7 +256,7 @@ Green Bar Pattern: Known ways to get to Green
 
 ## Interface Segregation Principle
 
-- **LSP**: "Clients should not be forced to depend on methods they don't use"
+- **ISP**: "Clients should not be forced to depend on methods they don't use"
   - Interfaces should be kept as small as possible
     - Will all implementations implement each member?
     - Will all clients need every member?
